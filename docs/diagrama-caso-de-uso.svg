@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #1f2937; }
+      .label { font: 600 18px Arial, sans-serif; fill: #1f2937; }
+      .actor { fill: #dbeafe; stroke: #2563eb; stroke-width: 2; }
+      .usecase { fill: #dcfce7; stroke: #16a34a; stroke-width: 2; }
+      .line { stroke: #374151; stroke-width: 2; fill: none; }
+      .small { font: 16px Arial, sans-serif; fill: #374151; }
+    </style>
+  </defs>
+
+  <text x="430" y="40" text-anchor="middle" class="title">Sistema de Gestão de Estoque</text>
+
+  <ellipse cx="120" cy="210" rx="70" ry="90" class="actor"/>
+  <circle cx="120" cy="165" r="28" fill="#93c5fd" stroke="#2563eb" stroke-width="2"/>
+  <path d="M 75 285 Q 120 245 165 285" class="line" stroke="#2563eb" stroke-width="2" fill="none"/>
+  <text x="120" y="330" text-anchor="middle" class="label">Funcionário</text>
+  <text x="120" y="352" text-anchor="middle" class="label">/ Administrador</text>
+
+  <ellipse cx="420" cy="110" rx="150" ry="46" class="usecase"/>
+  <text x="420" y="118" text-anchor="middle" class="small">Cadastrar Produto</text>
+
+  <ellipse cx="420" cy="210" rx="160" ry="46" class="usecase"/>
+  <text x="420" y="218" text-anchor="middle" class="small">Visualizar Produtos</text>
+
+  <ellipse cx="420" cy="310" rx="140" ry="46" class="usecase"/>
+  <text x="420" y="318" text-anchor="middle" class="small">Editar Produto</text>
+
+  <ellipse cx="650" cy="210" rx="140" ry="46" class="usecase"/>
+  <text x="650" y="218" text-anchor="middle" class="small">Excluir Produto</text>
+
+  <path d="M 190 180 L 280 125" class="line"/>
+  <path d="M 190 210 L 258 210" class="line"/>
+  <path d="M 190 240 L 280 295" class="line"/>
+  <path d="M 570 210 L 510 210" class="line"/>
+</svg>
