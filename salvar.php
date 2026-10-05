@@ -14,6 +14,7 @@ $preco = trim($_POST['preco'] ?? '');
 $quantidade = trim($_POST['quantidade'] ?? '');
 $data_validade = trim($_POST['data_validade'] ?? '');
 
+// Validação básica dos dados antes do cadastro.
 $erros = [];
 
 if ($nome === '') {

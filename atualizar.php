@@ -15,6 +15,8 @@ $preco = trim($_POST['preco'] ?? '');
 $quantidade = trim($_POST['quantidade'] ?? '');
 $data_validade = trim($_POST['data_validade'] ?? '');
 
+// Validação básica dos dados antes da atualização.
+
 if ($id === false || $id <= 0) {
     $_SESSION['mensagem'] = 'ID inválido.';
     $_SESSION['tipo_mensagem'] = 'erro';
