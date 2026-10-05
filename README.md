@@ -115,3 +115,5 @@ Para publicar o projeto no GitHub:
 ## 12. Diagrama de Caso de Uso
 
 O diagrama visual do caso de uso foi criado em `docs/diagrama-caso-de-uso.svg`.
+
+Este projeto está pronto para uso local em um ambiente XAMPP e pode ser enviado para o GitHub após autenticação do usuário.
