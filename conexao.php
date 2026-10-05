@@ -1,6 +1,6 @@
 <?php
 
-function conectarBanco()
+// Conexao com o banco MySQL\nfunction conectarBanco()
 {
     $host = 'localhost';
     $usuario = 'root';
