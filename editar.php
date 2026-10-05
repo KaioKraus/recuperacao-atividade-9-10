@@ -12,7 +12,6 @@ if ($id === false || $id <= 0) {
 }
 
 try {
-    $conn = conectarBanco();
     $sql = 'SELECT id, nome, categoria, descricao, preco, quantidade, data_validade FROM produtos WHERE id = ?';
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('i', $id);

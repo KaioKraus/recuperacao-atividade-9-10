@@ -12,7 +12,6 @@ if ($id === false || $id <= 0) {
 }
 
 try {
-    $conn = conectarBanco();
     $sql = 'DELETE FROM produtos WHERE id = ?';
     $stmt = $conn->prepare($sql);
 

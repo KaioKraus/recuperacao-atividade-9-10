@@ -61,7 +61,6 @@ $preco = (float) $preco;
 $quantidade = (int) $quantidade;
 
 try {
-    $conn = conectarBanco();
     $sql = 'UPDATE produtos SET nome = ?, categoria = ?, descricao = ?, preco = ?, quantidade = ?, data_validade = ? WHERE id = ?';
     $stmt = $conn->prepare($sql);
 

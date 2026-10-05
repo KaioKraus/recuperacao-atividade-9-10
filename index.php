@@ -10,7 +10,6 @@ $erroBanco = '';
 $resultado = null;
 
 try {
-    $conn = conectarBanco();
     $sql = 'SELECT id, nome, categoria, descricao, preco, quantidade, data_validade FROM produtos ORDER BY id ASC';
     $stmt = $conn->prepare($sql);
     $stmt->execute();

@@ -52,7 +52,6 @@ $preco = (float) $preco;
 $quantidade = (int) $quantidade;
 
 try {
-    $conn = conectarBanco();
     $sql = 'INSERT INTO produtos (nome, categoria, descricao, preco, quantidade, data_validade) VALUES (?, ?, ?, ?, ?, ?)';
     $stmt = $conn->prepare($sql);
 
