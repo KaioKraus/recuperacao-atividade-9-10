@@ -1,0 +1,245 @@
+:root {
+    --cor-primaria: #2c7a7b;
+    --cor-primaria-escura: #1f5f60;
+    --cor-secundaria: #e2e8f0;
+    --cor-fundo: #f4f7fb;
+    --cor-texto: #1f2937;
+    --cor-sucesso: #15803d;
+    --cor-sucesso-bg: #dcfce7;
+    --cor-erro: #b91c1c;
+    --cor-erro-bg: #fee2e2;
+    --cor-borda: #dbe3ee;
+    --cor-branco: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #eef6ff 0%, #f4f7fb 100%);
+    color: var(--cor-texto);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.small-container {
+    max-width: 760px;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    color: var(--cor-texto);
+    font-size: clamp(1.8rem, 2vw, 2.5rem);
+}
+
+.card {
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    overflow: hidden;
+}
+
+.formulario-card {
+    padding: 24px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--cor-branco);
+}
+
+th,
+td {
+    border-bottom: 1px solid var(--cor-borda);
+    padding: 12px 14px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #edf2f7;
+    font-size: 0.95rem;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+.acoes {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    opacity: 0.95;
+}
+
+.btn-primary {
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+.btn-primary:hover {
+    background: var(--cor-primaria-escura);
+}
+
+.btn-secondary {
+    background: var(--cor-secundaria);
+    color: var(--cor-texto);
+}
+
+.btn-danger {
+    background: var(--cor-erro);
+    color: var(--cor-branco);
+}
+
+.formulario-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo-duplo {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+label {
+    font-weight: 700;
+    color: var(--cor-texto);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: var(--cor-branco);
+    color: var(--cor-texto);
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid rgba(44, 122, 123, 0.2);
+    border-color: var(--cor-primaria);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.acoes-formulario {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.mensagem {
+    margin: 20px 0;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.mensagem.sucesso {
+    background: var(--cor-sucesso-bg);
+    color: var(--cor-sucesso);
+    border: 1px solid #bbf7d0;
+}
+
+.mensagem.erro {
+    background: var(--cor-erro-bg);
+    color: var(--cor-erro);
+    border: 1px solid #fecaca;
+}
+
+.vazio {
+    text-align: center;
+    font-weight: 700;
+    color: #475569;
+    padding: 22px;
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .campo-duplo {
+        grid-template-columns: 1fr;
+    }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        border: 1px solid var(--cor-borda);
+        border-radius: 12px;
+        margin-bottom: 16px;
+        padding: 12px;
+        background: var(--cor-branco);
+    }
+
+    td {
+        border: none;
+        padding: 8px 0;
+    }
+
+    td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: 700;
+        margin-bottom: 4px;
+        color: #475569;
+    }
+}
